@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //猜数字
+        /* function getRandom(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        console.log(getRandom(1, 10));
+        var max = getRandom(1, 10);
+        while (true) {
+            var num = prompt('猜数字？');
+            if (num > max) {
+                alert('猜大了');
+
+            } else if (num < max) {
+                alert('猜小了');
+            } else {
+                alert('猜对了');
+                break;
+            }
+        } */
+
+        /* //日期
+        var date = new Date();
+        console.log(date);
+        var date1 = new Date(2021 - 10 - 1);
+        console.log(date1);
+        var date2 = new Date(2021, 10, 1);
+        console.log(date2); */
+
+        //倒计时
+        /*  function countDown(time) {
+             var newTime = +new Date();
+             console.log(newTime);
+             var inputTime = +new Date(time);
+             console.log(inputTime);
+             var times = (newTime - inputTime) / 1000;
+             console.log(times);
+             var d = parseInt(times / 60 / 60 / 24);
+             var h = parseInt(times / 60 / 60 % 24);
+             var m = parseInt(times / 60 % 60);
+             var s = parseInt(times % 60)
+             d = d > 10 ? d : '0' + d;
+             h = h > 10 ? h : '0' + h;
+             m = m > 10 ? m : '0' + m;
+             s = s > 10 ? s : '0' + s;
+             return d + '天' + h + '时' + m + '分' + s + '秒'
+         }
+         countDown('2021-11-4 10:50:00')
+         console.log(countDown('2021-11-4 10:50:00')); */
+
+        /* //筛选数组
+        var arr = [1500, 1200, 2000, 2100, 1800];
+        var newArr = [];
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] < 2000) {
+                newArr.push(arr[i])
+            }
+        }
+        console.log(newArr); */
+
+        /* //去重
+        function Arr(arr) {
+            var newArr = [];
+            for (i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+        var arr1 = Arr(arr);
+        console.log(arr1); */
+
+        /* function cishu(str) {
+            var index = [];
+            for (i = 0; i < str.length; i++) {
+                if (str.indexOf('o', i) !== -1) {
+                    index.push(str.indexOf('o', i));
+                }
+            }
+            console.log(index);
+            var newIndex = [];
+            for (j = 0; j < index.length; j++) {
+                if (newIndex.indexOf(index[j]) == -1) {
+                    newIndex.push(index[j]);
+                }
+            }
+            console.log(newIndex);
+            return newIndex;
+        }
+        var str = 'oabcoefoxyozzopp';
+        console.log(cishu(str)); */
+
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for (i = 0; i < str.length; i++) {
+            var chars = str[i];
+            if (o[chars]) {
+                o[chars]++;
+            }
+            else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k]; ch = k;
+
+            }
+        }
+        console.log(max);
+        console.log(ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
